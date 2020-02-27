@@ -1,0 +1,35 @@
+--inserindo valores na procedure
+DECLARE
+  NOME_ENT VARCHAR2(200);
+  SOBRENOME_ENT VARCHAR2(200);
+  OBS_ENT VARCHAR2(200);
+  DATA_ENT VARCHAR2(200);
+  TIPO_LOGR_ENT VARCHAR2(200);
+  LOGR_ENT VARCHAR2(200);
+  BAIRRO_ENT VARCHAR2(200);
+  CIDADE_ENT VARCHAR2(200);
+  UF_ENT VARCHAR2(200);
+BEGIN
+  NOME_ENT := 'Mario';
+  SOBRENOME_ENT := 'almeida';
+  OBS_ENT := 'bonito';
+  DATA_ENT := '27/02/2020';
+  TIPO_LOGR_ENT := 'rua';
+  LOGR_ENT := 'dos inocentes';
+  BAIRRO_ENT := 'Vila Olimpia';
+  CIDADE_ENT := 'São Paulo';
+  UF_ENT := 'SP';
+
+  INSERE_CLIENTE(
+    NOME_ENT => NOME_ENT,
+    SOBRENOME_ENT => SOBRENOME_ENT,
+    OBS_ENT => OBS_ENT,
+    DATA_ENT => DATA_ENT,
+    TIPO_LOGR_ENT => TIPO_LOGR_ENT,
+    LOGR_ENT => LOGR_ENT,
+    BAIRRO_ENT => BAIRRO_ENT,
+    CIDADE_ENT => CIDADE_ENT,
+    UF_ENT => UF_ENT
+  );
+--rollback; 
+END;
